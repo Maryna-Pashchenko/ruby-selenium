@@ -1,5 +1,5 @@
 require "selenium/version"
 
-module Selenium
+module TestSelenium
   # Your code goes here...
 end

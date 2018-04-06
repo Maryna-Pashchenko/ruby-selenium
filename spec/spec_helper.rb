@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "selenium"
+require "test_selenium"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,3 +1,3 @@
-module Selenium
+module TestSelenium
   VERSION = "0.1.0"
 end
