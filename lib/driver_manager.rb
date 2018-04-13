@@ -1,4 +1,4 @@
-
+require 'singleton'
 class DriverManager
   include Singleton
 
@@ -6,7 +6,7 @@ class DriverManager
     @driver = Selenium::WebDriver.for(:chrome)
   end
 
-  def get(url)
+  def self.get(url)
     @driver.get(url)
   end
 
@@ -14,3 +14,13 @@ class DriverManager
     @driver.find_element(how, what)
   end
 end
+
+# class Driver
+#   def self.instance
+#     Thread.current['driver-singleton'] ||= Selenium::WebDriver.for(:chrome)
+#   end
+#
+#   def self.clear
+#     Thread.current['driver-singleton'] = nil
+#   end
+# end

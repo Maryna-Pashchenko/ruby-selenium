@@ -7,3 +7,6 @@ gemspec
 gem 'rake'
 gem 'rspec'
 gem 'selenium-webdriver', '~> 3.11'
+gem 'capybara'
+gem 'json', '~> 2.1'
+# gem 'capybara-webkit', '~> 1.11', '>= 1.11.1' #brew install qt@5.5

@@ -13,10 +13,35 @@ before(:all) do
   @driver = Selenium::WebDriver.for(:chrome,
                                     :desired_capabilities => caps)
 end
-
   context "smth" do
   it "has a version number" do
+    @driver.get("https://www.google.com/")
+    search_field = @driver.find_element(:name, 'q')
+    search_field.send_key("12334")
+    search_field.submit
+    # @driver.find_element(:name, 'btnK').submit
+    expect(TestSelenium::VERSION).not_to be nil
+  end
 
+  it "has a version number" do
+    @driver.get("https://www.google.com/")
+    search_field = @driver.find_element(:name, 'q')
+    search_field.send_key("12334")
+    search_field.submit
+    # @driver.find_element(:name, 'btnK').submit
+    expect(TestSelenium::VERSION).not_to be nil
+  end
+
+  it "has a version number" do
+    @driver.get("https://www.google.com/")
+    search_field = @driver.find_element(:name, 'q')
+    search_field.send_key("12334")
+    search_field.submit
+    # @driver.find_element(:name, 'btnK').submit
+    expect(TestSelenium::VERSION).not_to be nil
+  end
+
+  it "has a version number" do
     @driver.get("https://www.google.com/")
     search_field = @driver.find_element(:name, 'q')
     search_field.send_key("12334")

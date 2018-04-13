@@ -1,5 +1,7 @@
 require "bundler/setup"
 require "test_selenium"
+require 'capybara/rspec'
+require_relative  "../lib/driver_manager.rb"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -12,3 +14,8 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+Capybara.default_driver = :selenium_chrome
+Capybara.register_driver :selenium_chrome do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+
